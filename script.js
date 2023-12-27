@@ -199,13 +199,18 @@ function dodge() {
 }
 
 function defeatMonster() {
+    button1.innerText = "Go town";
+    button2.innerText = "Go town";
+    button3.innerText = "Go town";
+    button1.onclick = goTown;
+    button2.onclick = goTown;
+    button3.onclick = goTown;
     text.innerText = "You defeat the " + monsters[fighting].name + ".";
     monsterStats.style.display = "none";
     gold += Math.floor(monsters[fighting].level * 6.7)
     exp += monsters[fighting].level;
     goldText.innerText = gold;
     //expText.innerText = exp;
-    goTown();
 }
 
 function lose(){
